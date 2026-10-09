@@ -1,0 +1,29 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "video_cache_v2",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "ageGroup", "order": "ASCENDING"},
+        {"fieldPath": "category", "order": "ASCENDING"},
+        {"fieldPath": "expiresAt", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "user_interests",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "ageGroup", "order": "ASCENDING"},
+        {"fieldPath": "lastUpdated", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "interest_similarity",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "users", "arrayConfig": "CONTAINS"}
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
